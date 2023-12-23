@@ -4,7 +4,8 @@
   "description": "Portfolio Web donde estarán todos mis proyectos personales.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "gulp"
   },
   "repository": {
     "type": "git",

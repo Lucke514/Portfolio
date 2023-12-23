@@ -4,10 +4,9 @@
 .header {
     width: 100%;
     background-color: v.$gray-950;
-    height: 10rem;
+    height: 10vh;
 
     display: flex;
-    justify-content: right;
 
     .header-contenido {
         display: flex;
@@ -20,6 +19,12 @@
     display: flex;
     gap: 1.5rem;
     font-size: 2rem;
+
+    @include m.telefono {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
     a {
         text-align: center;

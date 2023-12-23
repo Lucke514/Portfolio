@@ -1,0 +1,49 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+// -> Div de Inicio
+.inicio {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+
+    // -> Contenido del Div 'Inicio'.
+    .inicio-contenido {
+        display: flex;
+        flex-direction: column;
+
+        // -> Alinar y centrar los textos.
+        align-items: left;
+        justify-content: left;
+
+        // -> h1 y h2
+        h1 , h2 {
+            color: v.$white-100;
+            margin-bottom: .5rem;
+
+            // -> Span de los Headers
+            span {
+                color: v.$red-300;
+            }
+        }
+
+        // -> Parrafo
+        p {
+            margin-top: 2rem;
+            color: v.$white-100;
+            max-width: 50%;
+        }
+
+        .inicio-contenido_redes {
+            a {
+                stroke: v.$red-300;
+
+                &:hover {
+                    stroke: v.$red-950;
+                }
+            }
+        }
+
+    }
+}
+

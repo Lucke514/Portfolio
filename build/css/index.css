@@ -1,9 +1,8 @@
 .header {
   width: 100%;
   background-color: #262626;
-  height: 10rem;
+  height: 10vh;
   display: flex;
-  justify-content: right;
 }
 .header .header-contenido {
   display: flex;
@@ -15,6 +14,13 @@
   display: flex;
   gap: 1.5rem;
   font-size: 2rem;
+}
+@media (max-width: 480px) {
+  .nav-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .nav-header a {
   text-align: center;
@@ -34,6 +40,36 @@
 .nav-header .boton-cv:hover {
   background-color: #4d0202;
   border: solid 2px;
+}
+
+.inicio {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+.inicio .inicio-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+}
+.inicio .inicio-contenido h1, .inicio .inicio-contenido h2 {
+  color: #efefef;
+  margin-bottom: 0.5rem;
+}
+.inicio .inicio-contenido h1 span, .inicio .inicio-contenido h2 span {
+  color: #ff9999;
+}
+.inicio .inicio-contenido p {
+  margin-top: 2rem;
+  color: #efefef;
+  max-width: 50%;
+}
+.inicio .inicio-contenido .inicio-contenido_redes a {
+  stroke: #ff9999;
+}
+.inicio .inicio-contenido .inicio-contenido_redes a:hover {
+  stroke: #4d0202;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -359,6 +395,7 @@ html {
 body {
   font-size: 1.6rem;
   background-color: #262626;
+  font-family: "Roboto", sans-serif;
 }
 
 p {
@@ -380,7 +417,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4.8rem;
 }
 
 h2 {
