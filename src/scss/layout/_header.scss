@@ -1,0 +1,50 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.header {
+    width: 100%;
+    background-color: v.$gray-950;
+    height: 10rem;
+
+    display: flex;
+    justify-content: right;
+
+    .header-contenido {
+        display: flex;
+        align-items: center;
+        margin-right: 5rem;
+    }
+}
+
+.nav-header {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 2rem;
+
+    a {
+        text-align: center;
+        color: v.$white-100;
+
+        &:hover {
+            color: v.$red-900;
+        }
+    }
+
+    .boton-cv {
+        //Diseño del boton
+        width: 7rem;
+        height: 3rem;
+        border-radius: .5rem;
+
+        // -> Colores del boton
+        background-color: v.$gray-950;
+        color: v.$red-300;
+        border: solid 1px v.$red-300;
+
+        &:hover {
+            background-color: v.$red-950;
+            border: solid 2px;
+            
+        }
+    }
+}
