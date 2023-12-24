@@ -7,12 +7,27 @@
     height: 10vh;
 
     display: flex;
+    justify-content: right;
+
+    // -> Media Query
+    @include m.telefono {
+        margin-top: 2rem;
+        height: auto;
+        justify-content: center;
+    }
 
     .header-contenido {
         display: flex;
         align-items: center;
         margin-right: 5rem;
+
+         // -> Media Query
+         @include m.telefono {
+            margin: 0;
+            justify-content: center;
+        }
     }
+
 }
 
 .nav-header {
@@ -26,9 +41,15 @@
         justify-content: center;
     }
 
+    button {
+        margin: 0 auto;
+    }
+
     a {
         text-align: center;
         color: v.$white-100;
+
+       
 
         &:hover {
             color: v.$red-900;

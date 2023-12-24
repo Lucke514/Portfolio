@@ -21,6 +21,12 @@
             color: v.$white-100;
             margin-bottom: .5rem;
 
+            // -> Media Query
+            @include m.telefono {
+                font-size: 3.5rem;
+            }
+
+
             // -> Span de los Headers
             span {
                 color: v.$red-300;
@@ -32,6 +38,12 @@
             margin-top: 2rem;
             color: v.$white-100;
             max-width: 50%;
+
+            // -> Media Query
+            @include m.telefono {
+                font-size: 2rem;
+                width: auto;
+            }
         }
 
         .inicio-contenido_redes {
