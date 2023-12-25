@@ -16,15 +16,40 @@
         justify-content: center;
     }
 
+    @include m.tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    //  .Media Query
+
+
+
     .header-contenido {
         display: flex;
         align-items: center;
         margin-right: 5rem;
 
-         // -> Media Query
+        // -> Media Query
          @include m.telefono {
             margin: 0;
             justify-content: center;
+            flex-direction: column;
+        }
+        //  .Media Query
+        @include m.tablet {
+            margin-top: 2rem;
+            flex-direction: column;
+        }
+
+        // -> Elementos Hijos
+        .titulo-header {
+            margin-bottom: 1rem;
+            color: v.$white-100;
+
+            span {
+                color: v.$red-300;
+            }
         }
     }
 
@@ -35,12 +60,23 @@
     gap: 1.5rem;
     font-size: 2rem;
 
+    // -> Media Query
+    @include m.tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
     @include m.telefono {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+    //  .Media Query
 
+
+
+    // -> Elementos Hijos
     button {
         margin: 0 auto;
     }
@@ -72,5 +108,53 @@
             border: solid 2px;
             
         }
+    }
+}
+
+// -> Boton para mostrar el nav
+.boton-nav {
+    // -estilo
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: v.$gray-900;
+    border: 1px solid v.$red-300;
+    
+    // -Posicion
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+
+}
+
+// -> Clase para que este invisible la navegacion
+.invisible {
+    position: absolute;
+    left: -1000rem;
+    height: 0;
+}
+
+// -> Clase para que este visible la navegacion
+.visible {
+    //  -> Animar la entrada del Nav
+    animation: slideUp 1s ease-out forwards;
+    right: 0;
+    height: 0;
+}
+
+
+
+
+// KeyFrame para cuando aparezca el nav
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

@@ -1,0 +1,138 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.formulario-overlay {
+    // -> Centrar el formulario
+    margin: auto auto;
+    max-width: 60%;
+    max-height: 100%;
+    background-color: #2b2b2b;
+    padding: 2rem;
+
+    //  -> Animar la entrada del formulario
+    animation: slideUp 1s ease-out forwards;
+
+
+    // -> Media query 
+    @include m.telefono {
+        max-height: 90%;
+        max-width: 90%;
+
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+    // - Box Shadow
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+    //  - Border Radius
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+
+    h1 {
+        text-align: center;
+        color: v.$white-100;
+        margin-bottom: 20px;
+    }
+
+    // -> Contenido del formulario
+    .formulario-contenido {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; 
+        max-width: 400px;
+        margin: auto;
+
+       
+      
+        label {
+            color: v.$white-100;    
+            margin-bottom: 5px;
+            font-weight: bold; 
+        }
+      
+        input[type="text"],
+        textarea {
+            padding: 8px;
+            border: 1px solid v.$gray-300; 
+            border-radius: .5rem; 
+        
+            &:focus {
+                border-color: v.$white-200; 
+                outline: none;
+            }
+        }
+      
+        textarea {
+            resize: none;
+        }
+
+        .boton {
+            background-color: v.$gray-900;
+            border: 1px solid v.$red-300;
+            border-radius: .5rem;
+            width: 10rem;
+            margin: 0 0 0 auto;
+            color: v.$white-100;
+            font-weight: 500;
+            height: 4rem;
+
+            &:hover {
+                background-color: v.$red-400;
+            }
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: grid;
+    place-items: center;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.btn-cerrar {
+    margin: -2rem 0 auto;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: v.$white-50;
+    color:  v.$black-900;
+    display: grid;
+    place-items: center;
+    font-family: 700;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover {
+        background-color: v.$red-400;
+        border: solid 1px v.$black-400;
+    }
+}
+
+
+
+// Keyframe
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

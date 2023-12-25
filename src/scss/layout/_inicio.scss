@@ -4,6 +4,7 @@
 // -> Div de Inicio
 .inicio {
     height: 90vh;
+    max-width: 90% !important;
     display: flex;
     align-items: center;
 
@@ -11,6 +12,7 @@
     .inicio-contenido {
         display: flex;
         flex-direction: column;
+        
 
         // -> Alinar y centrar los textos.
         align-items: left;
