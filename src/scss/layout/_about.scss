@@ -1,0 +1,85 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.about-contenido {
+    -webkit-box-shadow: 0px 0px 25px 7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 25px 7px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 25px 7px rgba(0,0,0,0.75);
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 5rem;
+    color: v.$white-100;
+
+
+    @include m.telefono {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include m.tablet {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        p {
+            text-align: left;
+        }
+    }
+
+
+}
+
+.about-text {
+    padding: 0 4rem;
+}
+
+.habilidades{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    margin: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+    gap: 1rem;
+
+    @include m.desktopXL {
+        grid-template-columns: repeat(3 , 1fr);
+    }
+
+    @include m.desktop {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    
+    @include m.tablet {
+        grid-template-columns: repeat(3 , 1fr);
+    }
+    @include m.telefono {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+
+    .habilidad {
+        -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
+
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 20rem ;
+
+        @include m.tablet {
+            width: 15rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: v.$red-300;
+        }
+    }
+}

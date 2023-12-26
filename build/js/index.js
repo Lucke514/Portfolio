@@ -13,18 +13,29 @@ import { crearFormulario , mostrarFormulario} from './components/webform.js';
 // Importa la funcion desde Behavior.js
 import { MediaQueryHeader } from './controller/behavior.js';
 
+// Importar la Funcion para crear las habilidades;
+import {insertarHabilidades} from './components/skills.js';
+
 
 
 // Llama las funciones Iniciales
 crearBoton();
 MediaQueryHeader();
 crearFormulario();
+insertarHabilidades();
 
 
 // Event Listener de los elementos
 
 // Realizar un Listener para poder validar el cambio de tamaño de la pantalla.
 window.addEventListener('resize' , MediaQueryHeader);
+
+// -> Funcion Listener para el boton para desplegar el nav
+const botonNav = document.querySelector('.boton-nav')
+botonNav.addEventListener('click' , function() {
+    document.querySelector('nav').classList.toggle('visible');
+})
+
 
 // ->Mostrar formulario con eventListener
 document.querySelector('#mailForm').addEventListener('click' , mostrarFormulario);

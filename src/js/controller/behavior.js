@@ -22,10 +22,7 @@ export function MediaQueryHeader() {
         titulo.innerHTML = '<span>L</span>ucas'
         titulo.classList.add('titulo-header');
 
-        // -> Funcion Listener para el boton para desplegar el nav
-        botonNav.addEventListener('click' , function() {
-            document.querySelector('nav').classList.toggle('visible');
-        })
+        
     
         // - Validar que no exista el titulo y el boton
         const condTitulo = document.querySelector('.titulo-header');
@@ -50,7 +47,10 @@ export function MediaQueryHeader() {
 
         }
     }
+
+    
 }
+
 
 
   

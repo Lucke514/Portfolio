@@ -119,8 +119,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: v.$gray-900;
+    background-color: v.$gray-950;
+    border-radius: .5rem;
     border: 1px solid v.$red-300;
+    color: v.$white-150;
     
     // -Posicion
     position: absolute;

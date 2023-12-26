@@ -22,7 +22,7 @@ p {
 
 .contenedor {
     width: 95%;
-    max-width: 120rem;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -44,4 +44,8 @@ h2 {
 
 h3 {
     font-size: 3rem;
+}
+
+span {
+    color: v.$red-300;
 }
