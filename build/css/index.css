@@ -101,27 +101,28 @@
 }
 
 .invisible {
-  position: absolute;
-  left: -1000rem;
-  height: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  padding: 15px;
+  box-sizing: border-box;
+  transform: translateX(-150%);
+  transition: transform 0.3s ease-in-out;
 }
 
 .visible {
-  animation: slideUp 1s ease-out forwards;
-  right: 0;
-  height: 0;
+  transform: translateX(0);
+}
+@media (max-width: 768px) {
+  .visible {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 .inicio {
   height: 90vh;
   max-width: 90% !important;
@@ -166,7 +167,8 @@
 
 .formulario-overlay {
   margin: auto auto;
-  max-width: 60%;
+  max-width: 90%;
+  width: 50%;
   max-height: 100%;
   background-color: #2b2b2b;
   padding: 2rem;
@@ -181,14 +183,22 @@
 }
 @media (max-width: 480px) {
   .formulario-overlay {
-    max-height: 90%;
+    max-height: 100%;
     max-width: 90%;
+    width: 90%;
   }
   .formulario-overlay h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .formulario-overlay {
+    max-height: 100%;
+    width: 70%;
   }
 }
 .formulario-overlay h1 {
+  font-size: 2rem;
   text-align: center;
   color: #efefef;
   margin-bottom: 20px;
@@ -197,7 +207,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 400px;
+  max-width: 90%;
   margin: auto;
 }
 .formulario-overlay .formulario-contenido label {
@@ -205,13 +215,14 @@
   margin-bottom: 5px;
   font-weight: bold;
 }
-.formulario-overlay .formulario-contenido input[type=text],
+.formulario-overlay .formulario-contenido input,
 .formulario-overlay .formulario-contenido textarea {
+  min-height: 3rem;
   padding: 8px;
   border: 1px solid #b0b0b0;
   border-radius: 0.5rem;
 }
-.formulario-overlay .formulario-contenido input[type=text]:focus,
+.formulario-overlay .formulario-contenido input:focus,
 .formulario-overlay .formulario-contenido textarea:focus {
   border-color: #dcdcdc;
   outline: none;
@@ -245,7 +256,7 @@
 }
 
 .btn-cerrar {
-  margin: -2rem 0 auto;
+  margin: 1rem 0 auto;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;

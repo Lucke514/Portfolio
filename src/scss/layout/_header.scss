@@ -131,30 +131,25 @@
 
 // -> Clase para que este invisible la navegacion
 .invisible {
-    position: absolute;
-    left: -1000rem;
-    height: 0;
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding: 15px;
+    box-sizing: border-box;
+    transform: translateX(-150%);
+    transition: transform 0.3s ease-in-out;
+  }
 
 // -> Clase para que este visible la navegacion
 .visible {
     //  -> Animar la entrada del Nav
-    animation: slideUp 1s ease-out forwards;
-    right: 0;
-    height: 0;
-}
-
-
-
-
-// KeyFrame para cuando aparezca el nav
-@keyframes slideUp {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
+    transform: translateX(0);
+    
+    @include m.tablet {
+        display: flex;
+        flex-direction: column;
     }
 }

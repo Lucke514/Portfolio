@@ -5,7 +5,8 @@
 .formulario-overlay {
     // -> Centrar el formulario
     margin: auto auto;
-    max-width: 60%;
+    max-width: 90%;
+    width: 50%;
     max-height: 100%;
     background-color: #2b2b2b;
     padding: 2rem;
@@ -16,12 +17,20 @@
 
     // -> Media query 
     @include m.telefono {
-        max-height: 90%;
+        max-height: 100%;
         max-width: 90%;
+        width: 90%;
 
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
+
+        
+    }
+
+    @include m.tablet {
+        max-height: 100%;
+        width: 70%;
     }
 
     // - Box Shadow
@@ -36,6 +45,7 @@
     border: 0px solid #000000;
 
     h1 {
+        font-size: 2rem;
         text-align: center;
         color: v.$white-100;
         margin-bottom: 20px;
@@ -46,7 +56,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px; 
-        max-width: 400px;
+        max-width: 90%;
         margin: auto;
 
        
@@ -57,8 +67,9 @@
             font-weight: bold; 
         }
       
-        input[type="text"],
+        input,
         textarea {
+            min-height: 3rem;
             padding: 8px;
             border: 1px solid v.$gray-300; 
             border-radius: .5rem; 
@@ -103,7 +114,7 @@
 }
 
 .btn-cerrar {
-    margin: -2rem 0 auto;
+    margin: 1rem 0 auto;
     width: 5rem;
     height: 5rem;
     border-radius: 50%;

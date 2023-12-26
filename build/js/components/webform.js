@@ -6,22 +6,22 @@ export function crearFormulario() {
         <h1> Rellene Todos los campos </h1>
     
         <div class="formulario-contenido">
-            <label for="Nombre"> Nombre </label>
-            <input type="text" id="Nombre" >
+            <label for="Nombre"> Nombre(s) </label>
+            <input type="text" id="Nombre" required>
         
-            <label for="Apellido"> Apellido </label>
-            <input type="text" id="Apellido">
+            <label for="Apellido"> Apellido(s) </label>
+            <input type="text" id="Apellido" required>
         
             <label for="telefono"> Telefono </label>
-            <input type="text" id="telefono">
+            <input type="number" id="telefono" required>
         
             <label for="email"> Correo </label>
-            <input type="text" id="email">
+            <input type="email" id="email" required>
 
             <label for="mensaje"> Mensaje </label>
-            <textarea name="mensaje" id="mensaje" cols="30" rows="5"></textarea>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="5" required></textarea>
 
-            <input type="submit" value="Enviar" class="boton">
+            <input type="submit" value="Enviar" class="boton" required>
         </div>
     `
 
