@@ -2,6 +2,7 @@
 @use '../base/mixins' as m;
 
 .about-contenido {
+    margin-top: 5rem;
     -webkit-box-shadow: 0px 0px 25px 7px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 25px 7px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 25px 7px rgba(0,0,0,0.75);
@@ -29,6 +30,18 @@
         }
     }
 
+    @include m.desktopXL {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        p {
+            text-align: left;
+        }
+    }
+
 
 }
 
@@ -38,19 +51,17 @@
 
 .habilidades{
     display: grid;
-    grid-template-columns: repeat(4 , 1fr);
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 1rem ;
     margin: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 3rem;
-    gap: 1rem;
+    padding: 1rem;
 
     @include m.desktopXL {
         grid-template-columns: repeat(3 , 1fr);
     }
 
     @include m.desktop {
-        grid-template-columns: repeat(2 , 1fr);
+        grid-template-columns: repeat(3 , 1fr);
     }
     
     @include m.tablet {

@@ -49,3 +49,8 @@ h3 {
 span {
     color: v.$red-300;
 }
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}

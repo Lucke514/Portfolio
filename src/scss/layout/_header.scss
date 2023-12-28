@@ -122,7 +122,7 @@
     background-color: v.$gray-950;
     border-radius: .5rem;
     border: 1px solid v.$red-300;
-    color: v.$white-150;
+    color: v.$white-100;
     
     // -Posicion
     position: absolute;
@@ -143,13 +143,12 @@
     box-sizing: border-box;
     transform: translateX(-150%);
     transition: transform 0.3s ease-in-out;
-  }
+}
 
 // -> Clase para que este visible la navegacion
 .visible {
     //  -> Animar la entrada del Nav
     transform: translateX(0);
-    
     @include m.tablet {
         display: flex;
         flex-direction: column;

@@ -5,7 +5,7 @@
 */
 
 // Importa la función desde header.js
-import { crearBoton } from './components/header.js'; 
+import { InsertBotonCV } from './components/header.js'; 
 
 // Importa la función desde webform.js
 import { crearFormulario , mostrarFormulario} from './components/webform.js';
@@ -19,7 +19,7 @@ import {insertarHabilidades} from './components/skills.js';
 
 
 // Llama las funciones Iniciales
-crearBoton();
+InsertBotonCV();
 MediaQueryHeader();
 crearFormulario();
 insertarHabilidades();
@@ -29,13 +29,6 @@ insertarHabilidades();
 
 // Realizar un Listener para poder validar el cambio de tamaño de la pantalla.
 window.addEventListener('resize' , MediaQueryHeader);
-
-// -> Funcion Listener para el boton para desplegar el nav
-const botonNav = document.querySelector('.boton-nav')
-botonNav.addEventListener('click' , function() {
-    document.querySelector('nav').classList.toggle('visible');
-})
-
 
 // ->Mostrar formulario con eventListener
 document.querySelector('#mailForm').addEventListener('click' , mostrarFormulario);
